@@ -1,0 +1,79 @@
+$background: #e74c3c
+$select-color: rgba(255, 255, 255, 0.65)
+$select-background: rgba(0, 0, 0, 0.2)
+$select-width: 122px
+$select-height: 30px
+
+.select-hidden
+    display: none
+    visibility: hidden
+    padding-right: 10px
+
+.select
+    cursor: pointer
+    display: inline-block
+    position: relative
+    font-size: 14px
+    color: $select-color
+    width: $select-width
+    height: $select-height
+    text-transform: none
+    letter-spacing: normal
+
+.select-styled
+    border-radius: 15px
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: $select-background
+    padding: 4px 15px
+    transition: border-radius .1s ease-in-out
+
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        right: 10px
+        top: 11px
+        +retina-sprite($icon-arrow-down-group)
+
+    &:active, &.active
+        background-color: darken($select-background, 5)
+        border-radius: 15px 15px 0 0
+
+        &:after
+            +retina-sprite($icon-arrow-down-hov-group)
+
+.select
+    .select-options
+        display: none
+        position: absolute
+        top: 100%
+        right: 0
+        left: 0
+        z-index: 999
+        margin: 0
+        padding: 0
+        list-style: none
+        background-color: darken($select-background, 5)
+        border-radius: 0 0 15px 15px
+
+        li
+            display: block
+            margin: 0
+            padding: 5px 0
+            font-size: 14px
+            text-indent: 15px
+            //border-top: 1px solid darken($select-background, 10)
+            text-transform: none
+            letter-spacing: normal
+            transition: color .2s ease-in-out
+            &:after
+                display: none
+            &:hover
+                color: #fff
+
+            &[rel="hide"]
+                display: none

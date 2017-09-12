@@ -1,0 +1,14 @@
+body {
+  background-color: #2f2f2f;
+}
+.filters__course span:first-child {
+  color: inherit;
+}
+
+.footer__copyright button {
+  color: #000;
+}
+
+._num {
+  vertical-align: middle;;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Magisteria</title>
+
+    <link rel="stylesheet" href="/assets/css/main.min.css" type="text/css" />
+    <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="global-wrapper">
+        <div class="header js-header">
+            <div class="layout-positioner clearfix">
+                <div class="header__nav">
+                    <div class="header__logo">
+                        <a href="/"></a>
+                    </div>
+                    <div class="header__menu">
+                        <ul>
+                            <li><a class="active" href="#">Курсы</a></li>
+                            <li><a href="#">Участники</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__profile">
+                        <div class="header__profile-name">
+                            <div class="name-inner">
+                                <span>Алексей Константинопольский</span>
+                            </div>
+                        </div>
+                        <div class="header__profile-avatar">
+                            <img src="/assets/images/avatar.png" alt="">
+                        </div>
+                        <div class="header__profile-menu">
+                            <ul>
+                                <li>Настройки</li>
+                                <li class="_exit">Выйти</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="filters">
+                <div class="layout-positioner">
+                    <div class="filters__course">
+                        Курсы <span>+</span>
+                    </div>
+                    <div class="filters__list-wrap clearfix">
+                        <ul class="filters__list clearfix">
+                            <li class="filters__item active">Все</li>
+                            <li class="filters__item">Публичные</li>
+                            <li class="filters__item">в работе</li>
+                            <li class="filters__item filter-select">
+                                <select class="js-select" id="language">
+                                    <option value="hide">Все языки</option>
+                                    <option value="ru">Русский</option>
+                                    <option value="en">Английский</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <div class="filters__archive"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="courses">
+                <div class="layout-positioner">
+                    <div class="courses__course js-course">
+                        <div class="courses__course-img">
+                            <img src="/assets/images/courses/course-2.png" alt="">
+                            <div class="watch"><span>#1</span></div>
+                        </div>
+                        <div class="courses__course-descr">Дополнительное образование персонала по брендингу.<span class="author">Антон&nbsp;Гора</span></div>
+                        <div class="courses__course-price">от 3 500 ₽</div>
+                        <div class="courses__course-context js-context">
+                            <ul>
+                                <li class="_num"><span>#1</span> Главный</li>
+                                <li>Копировать</li>
+                                <li class="_public">Опубликовать</li>
+                                <li>Превью</li>
+                                <li class="_archive">Архивировать</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courses__course js-course">
+                        <div class="courses__course-img">
+                            <img src="/assets/images/courses/course-3.png" alt="">
+                            <div class="watch"></div>
+                        </div>
+                        <div class="courses__course-descr">Ботаническая акварель для начинающих.<span class="author">Антон&nbsp;Гора</span></div>
+                        <div class="courses__course-price">от 3 500 ₽</div>
+                        <div class="courses__course-context js-context">
+                            <ul>
+                                <li class="_num"><span>#1</span> Главный</li>
+                                <li>Копировать</li>
+                                <li class="_public">Опубликовать</li>
+                                <li>Превью</li>
+                                <li class="_archive">Архивировать</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courses__course js-course">
+                        <div class="courses__course-img">
+                            <img src="/assets/images/courses/course-2.png" alt="">
+                        </div>
+                        <div class="courses__course-descr">Специализация «Машинное обучение и анализ данных».<span class="author">Рустамбек&nbsp;Гаврилов, Петр&nbsp;Ладья</span></div>
+                        <div class="courses__course-price">от 600 ₽</div>
+                        <div class="courses__course-context js-context">
+                            <ul>
+                                <li class="_num"><span>#1</span> Главный</li>
+                                <li>Копировать</li>
+                                <li class="_public">Опубликовать</li>
+                                <li>Превью</li>
+                                <li class="_archive">Архивировать</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courses__course js-course">
+                        <div class="courses__course-img">
+                            <img src="/assets/images/courses/default.png" alt="">
+                        </div>
+                        <div class="courses__course-descr">«Я – режиссёр». Интерактивное онлайн-руководство о том, как сделать свой фильм.<span class="author">Антон&nbsp;Гора</span></div>
+                        <div class="courses__course-price">от 3 600 ₽</div>
+                        <div class="courses__course-context js-context">
+                            <ul>
+                                <li class="_num"><span>#1</span> Главный</li>
+                                <li>Копировать</li>
+                                <li class="_public">Опубликовать</li>
+                                <li>Превью</li>
+                                <li class="_archive">Архивировать</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courses__course js-course">
+                        <div class="courses__course-img">
+                            <img src="/assets/images/courses/course-5.png" alt="">
+                            <div class="language">
+                                <a href="#">En</a>
+                            </div>
+                        </div>
+                        <div class="courses__course-descr">Дополнительное образование персонала по брендингу.<span class="author">Антон&nbsp;Гора</span></div>
+                        <div class="courses__course-price">от 3 600 ₽</div>
+                        <div class="courses__course-context js-context">
+                            <ul>
+                                <li class="_num"><span>#1</span> Главный</li>
+                                <li>Копировать</li>
+                                <li class="_public">Опубликовать</li>
+                                <li>Превью</li>
+                                <li class="_archive">Архивировать</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="layout-positioner clearfix">
+                <div class="footer__copyright">2017— 2026.  Магистерия</div>
+                <div class="footer__logo">
+                    <a href="/"></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /global wrapper -->
+
+    <script type="text/javascript" src="/assets/js/main.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

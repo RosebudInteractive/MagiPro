@@ -1,0 +1,29 @@
+=placeholder
+    &::-webkit-input-placeholder
+        @content
+    &:-moz-placeholder
+        @content
+    &::-moz-placeholder
+        @content
+    &:-ms-input-placeholder
+        @content
+
+=icon($icon, $width, $height)
+    width: $width
+    height: $height
+    background: url('../img/svg/' + $icon + '.svg') 0 0 no-repeat
+    background-size: $width $height
+
+=selection
+    ::selection
+        @content
+    ::-moz-selection
+        @content
+
+=vAlignAbs()
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto

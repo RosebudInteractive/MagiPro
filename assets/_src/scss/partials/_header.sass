@@ -1,0 +1,198 @@
+.header
+    padding: 16px 0
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    height: 84px
+    z-index: 99
+    box-sizing: border-box
+    background-color: #2f2f2f
+    transform: translateZ(0)
+    transition: box-shadow .2s ease-in-out
+
+    .layout-positioner
+        @media (max-width: $screenM)
+            height: 52px
+            overflow: hidden
+
+    &._fixed
+        position: fixed
+        box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3)
+
+    &__nav
+        @media (max-width: $screenM)
+            overflow-x: scroll
+            overflow-y: hidden
+            width: auto
+            white-space: nowrap
+
+    &__logo, &__menu
+        float: left
+
+        @media (max-width: $screenM)
+            white-space: normal
+            float: none
+            display: inline-block
+            vertical-align: top
+
+    &__logo
+        width: 52px
+        height: 52px
+        background-image: url("../images/svg/logo.svg")
+        background-repeat: no-repeat
+        background-size: 52px
+        margin-right: 36px
+        transform: translateZ(0)
+
+        a
+            display: block
+            width: 100%
+            height: 100%
+
+    &__menu
+        transform: translateZ(0)
+
+        ul
+            padding: 0
+            margin: 0
+            font-size: 0
+
+            li
+                display: inline-block
+                vertical-align: top
+                font-size: 18px
+                line-height: 52px
+                margin-right: 32px
+
+                a
+                    color: rgba(255, 255, 255, 0.65)
+                    transition: color .2s ease-in-out
+
+                    &.active
+                        color: #C8684C
+
+                    &:hover:not(.active)
+                        color: #fff
+
+    &__profile
+        float: right
+        font-size: 0
+
+        @media (max-width: $screenM)
+            white-space: normal
+            float: none
+            display: inline-block
+            vertical-align: top
+
+        &-name, &-avatar, &-menu
+            display: inline-block
+            vertical-align: top
+
+        &-name
+            font-size: 14px
+            line-height: 18px
+            color: rgba(255, 255, 255, 0.65)
+            text-align: right
+            margin-right: 17px
+            max-width: 200px
+            height: 52px
+
+            @media (max-width: 740px)
+                display: none
+
+            .name-inner
+                display: table
+                height: 100%
+                width: 100%
+
+            span
+                display: table-cell
+                vertical-align: middle
+
+        &-avatar
+            width: 52px
+            height: 52px
+
+            img
+                display: block
+                max-width: 100%
+
+        &-menu
+            position: relative
+            height: 52px
+            width: 52px
+            cursor: pointer
+            border-radius: 6px 6px 0 0
+            transition: background-color .15s ease-in-out
+            transform: translateZ(0)
+            overflow: hidden
+
+            &:before
+                content: ''
+                display: block
+                z-index: 1
+                width: 14px
+                height: 9px
+                +vAlignAbs()
+                +retina-sprite($icon-arrow-down-group)
+                transform-origin: 50% 50%
+                transition: transform .2s ease-in-out
+
+
+            &:hover
+                background-color: #000
+                overflow: visible
+
+                ul
+                    z-index: 2
+                    opacity: 1
+
+                &:before
+                    //transform: rotate(180deg)
+                    +retina-sprite($icon-arrow-down-hov-group)
+
+            ul
+                position: absolute
+                bottom: 0
+                right: 0
+                transform: translateY(85%)
+                width: 216px
+                background-color: #000
+                border-radius: 6px 0 6px 6px
+                padding: 25px
+                box-sizing: border-box
+                z-index: -1
+                opacity: 0
+                transition: opacity .2s ease-in-out, z-index .2s ease-in-out
+
+                li
+                    display: block
+                    font-size: 18px
+                    line-height: 21px
+                    list-style-type: none
+                    color: rgba(255, 255, 255, 0.65)
+                    margin: 0 auto 16px
+                    padding-left: 28px
+                    position: relative
+                    transition: color .2s ease-in-out
+                    transform: translateZ(0)
+
+                    &:last-child
+                        margin-bottom: 0
+
+                    &:hover
+                        color: #fff
+
+                    &._exit
+                        &:before
+                            content: ''
+                            display: block
+                            width: 15px
+                            height: 16px
+                            position: absolute
+                            top: 3px
+                            left: 1px
+                            background-image: url("../images/svg/exit.svg")
+                            background-repeat: no-repeat
+                            background-size: 15px 16px

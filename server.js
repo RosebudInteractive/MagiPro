@@ -77,7 +77,7 @@ app.post('/api/course/main', function(req, res, next) {
     account.save().then(() => {
       res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify({ 
-        course: course.get({plain:true}),
+        account: account.get({plain:true}),
       }));
     })
   })
@@ -112,6 +112,8 @@ app.get('/api/domain/:name', function (req, res, next) {
                 as: 'AuthorIntl'
               }
             ]
+          }, {
+            model: db.Lesson
           }
         ]
       },

@@ -1,0 +1,109 @@
+.intro 
+    display: flex
+    flex-direction: column 
+    justify-content: flex-end
+    box-sizing: border-box
+    padding: 52px 0
+    min-height: 450px
+    font-size: 0
+    background-color: #3a582a
+    background-image: url("../images/bg-intro.png")
+    background-repeat: no-repeat 
+    background-size: cover
+    background-position: top center
+
+    @media (max-width: $screenXL)
+        padding: 34px 0
+        min-height: 400px
+
+        @media (max-width: $screenL)
+            padding: 40px 0
+
+    .layout-positioner
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+        height: 100%
+
+        @media (max-width: $screenXL)
+            display: block
+
+    &__col 
+        display: flex
+        flex-direction: column 
+        justify-content: flex-end
+        height: 100%
+        max-width: 560px
+
+        &:nth-child(2) 
+            margin-left: 76px
+            max-width: 540px
+
+        &._right
+            @media (max-width: $screenXL)
+                float: right
+                margin-top: 6.6%
+
+            @media (max-width: $screenL)
+                float: none
+                margin-left: 0
+                margin-top: 3.6%
+
+    &__title 
+        position: relative
+        margin: 0
+
+        &:before 
+            content: ''
+            position: absolute
+            top: 12px
+            left: 0
+            width: 38px
+            height: 28px
+            background-image: url("../images/svg/eye.svg")
+            background-repeat: no-repeat 
+            background-size: contain
+
+            @media (max-width: $screenL)
+                top: 0
+                left: 2px
+
+        span 
+            padding-left: 50px
+            font-weight: 400
+            font-size: 43px
+            line-height: 43px
+            color: #fff
+
+            @media (max-width: $screenL)
+                font-size: 28px
+                line-height: 23px
+
+    &__authors 
+        font-size: 14px
+        line-height: 24px
+        color: rgba(255, 255, 255, 0.65)
+
+        @media (max-width: $screenL)
+            font-size: 13px
+            line-height: 20px
+
+        h2 
+            margin: 0
+            font-size: 14px
+            line-height: 24px
+            color: #fff
+
+            @media (max-width: $screenL)
+                font-weight: normal
+
+    &__text
+        margin: 24px 0 0 0
+        padding-bottom: 6px
+        font-size: 18px
+        line-height: 23px
+        color: rgba(255, 255, 255, 0.65)
+
+        @media (max-width: $screenL)
+            font-size: 16px
+            line-height: 20px

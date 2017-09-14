@@ -10,11 +10,25 @@ class Footer extends React.PureComponent {
   //       <FormattedMessage id="app.greeting" defaultMessage="Hi there?" />
 
   render() {
-    const { changeLang } = this.props;
+    const { setInterfaceLang, currentLocale } = this.props;
     return (
       <div className="footer">
         <div className="layout-positioner clearfix">
-          <div className="footer__copyright">2017— 2026.  Магистерия | <button onClick={() => changeLang('ru')}>ru</button> | <button onClick={() => changeLang('en')}>en</button> | <button onClick={() => changeLang('fr')}>fr</button></div>
+          <div className="footer__language-picker">
+            <span className="footer__language-picker-title"><span>Язык:</span></span>
+            <ul>
+              <li className={currentLocale === 'ru' ? "picked" : ''}>
+                <a href="#" onClick={() => setInterfaceLang('ru')}><span>Русский</span></a>
+              </li>
+              <li className={currentLocale === 'en' ? "picked" : ''}>
+                <a href="#" onClick={() => setInterfaceLang('en')}><span>English</span></a>
+              </li>
+              <li className={currentLocale === 'fr' ? "picked" : ''}>
+                <a href="#" onClick={() => setInterfaceLang('fr')}><span>Français</span></a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer__copyright"><span>2017— 2026.  Магистерия</span></div>
           <div className="footer__logo">
             <a href="/"></a>
           </div>

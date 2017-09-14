@@ -1,0 +1,333 @@
+.lessons 
+    padding-bottom: 34px
+
+    &.archive
+        padding-top: 20px
+
+        .lesson__play-block
+            @media (max-width: $screenL)
+                display: none
+
+        .lesson__status
+            @media (max-width: $screenL)
+                padding-left: 0
+                bottom: -14px
+
+                .lesson__del
+                    display: none
+
+        .lesson__title
+            @media (max-width: $screenM)
+                max-width: 57%
+
+        .lesson__info
+            @media (max-width: $screenL)
+                padding-left: 0
+                padding-right: 35px
+
+                p
+                    font-size: 16px
+
+                    &._status, &.date
+                        display: inline-block
+                        vertical-align: top
+
+                .lesson__reset
+                    right: -80%
+                    left: auto
+                    top: -60px
+
+            @media (max-width: $screenM)
+                .lesson__reset
+                    right: -23%
+
+.lesson 
+    position: relative
+    box-sizing: border-box
+    padding: 16px 0
+    min-height: 130px
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0)
+    transition: box-shadow 0.4s ease
+
+    @media (max-width: $screenXL)
+        padding: 10px 0
+        min-height: 118px
+
+    .layout-positioner
+        display: flex
+
+        @media (max-width: $screenL)
+            padding-bottom: 18px
+            margin-bottom: 50px
+
+    &._drag
+        box-shadow: 0px 2px 32px rgba(0, 0, 0, 0.4)
+
+    &:hover,
+    &:first-child 
+
+        .lesson__drag
+            display: block
+
+    &__info
+        position: relative
+        padding-left: 68px
+        padding-right: 80px
+        font-size: 18px
+        line-height: 24px
+        color: rgba(255, 255, 255, 0.3)
+
+        p.date 
+            color: #fff
+
+    &__reset 
+        position: absolute
+        top: 6px
+        left: 0
+        width: 42px
+        height: 42px
+        font-size: 0
+        background-image: url("../images/svg/reset.svg")
+        background-repeat: no-repeat 
+        background-size: contain 
+        background-position: center
+        opacity: 0.3
+        transition: opacity 0.4s ease
+        cursor: pointer
+
+        .lesson:first-child &
+            opacity: 1
+
+        &:hover 
+            opacity: 1
+
+    &__del 
+        font-size: 0
+        position: absolute
+        top: 14px
+        right: 0
+        width: 18px
+        height: 18px
+        font-size: 0
+        background-image: url("../images/svg/x.svg")
+        opacity: 1
+        cursor: pointer 
+        transition: opacity 0.4s ease
+
+        &:hover 
+            opacity: 0.4
+
+    &__drag 
+        display: none
+        position: absolute
+        top: 28px
+        left: 16px
+        font-size: 0
+        height: 30px
+        width: 12px
+        cursor: pointer
+        opacity: 0.3
+        transition: opacity 0.4s ease
+
+        @media (max-width: $screenXL)
+            top: 31px
+
+        @media (max-width: $screenL)
+            left: 3px
+
+        &:after 
+            position: absolute
+            top: 7px
+            left: 4px
+            content: ''
+            width: 4px
+            height: 4px
+            background-color: #FFF
+            border-radius: 50%
+            box-shadow: 0px 6px 0px 0px #fff, 0px 12px 0px 0px #fff
+
+        &:hover 
+            opacity: 1
+
+            &:before 
+                position: absolute
+                content: ''
+                width: 100%
+                height: 100%
+                background: radial-gradient(ellipse at center, rgba(200,105,76,0.2) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%)
+
+    &__number 
+        box-sizing: border-box
+        display: inline-block
+        vertical-align: top
+        padding: 0 10px 0 16px
+        min-width: 60px
+        font-size: 18px
+        line-height: 44px
+        color: rgba(255, 255, 255, 0.3)
+
+        @media (max-width: $screenXL)
+            min-width: 45px
+
+        @media (max-width: $screenL)
+            padding: 0 5px 0 3px
+            min-width: 26px
+
+    &__play-block
+        display: inline-block
+        vertical-align: top
+        text-align: center
+
+        @media (max-width: $screenL)
+            position: absolute
+            right: 0
+            top: 5px
+
+    &__play 
+        width: 42px
+        height: 42px
+        font-size: 0
+        background-image: url("../images/svg/play.svg")
+        cursor: pointer
+        opacity: 0.3
+        transition: opacity 0.4s ease
+
+        &:hover 
+            opacity: 1
+
+    &__duration
+        font-size: 14px
+        line-height: 26px
+        color: rgba(255, 255, 255, 0.3)
+
+    &__title 
+        box-sizing: border-box
+        display: flex
+        flex-grow: 1
+        padding-left: 24px
+        max-width: 650px
+
+        @media (max-width: $screenXL)
+            max-width: 56%
+
+        @media (max-width: $screenL)
+            padding-left: 0
+            padding-top: 7px
+            max-width: 65%
+
+    &__status 
+        position: relative
+        display: flex
+        align-items: center
+        margin-left: auto
+        width: 180px
+
+        @media (max-width: $screenL)
+            position: absolute
+            bottom: -30px
+            left: 0
+            display: block
+            height: 30px
+            padding-left: 22px
+
+        .archive & 
+            width: 280px
+
+            @media (max-width: $screenXL)
+                width: 230px
+
+    &__type 
+        font-size: 32px
+        line-height: 42px
+        color: rgba(255, 255, 255, 0.65)
+
+        @media (max-width: $screenL)
+            font-size: 21px
+            line-height: 27px
+
+    h3 
+        margin: 0
+        font-weight: 400
+        font-size: 32px
+        line-height: 42px
+        color: #fff
+
+        @media (max-width: $screenL)
+            font-size: 21px
+            line-height: 27px
+
+        a 
+            position: relative
+            display: inline
+            color: #fff
+            text-decoration: none
+            border-bottom: 1px solid rgba(255, 255, 255, 0)
+            transition: border-bottom 0.4s ease
+
+            &:hover 
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+
+    &__lock
+        font-size: 0
+        margin-left: 10px
+        width: 13px
+        height: 16px
+        background-image: url("../images/svg/lock.svg")
+        background-repeat: no-repeat 
+        background-size: contain 
+        opacity: 0.1
+        cursor: pointer
+
+        @media (max-width: $screenXL)
+            position: absolute
+            right: 0
+            top: 10px
+
+        @media (max-width: $screenL)
+            top: 8px
+
+        &.locked 
+            opacity: 1
+    .select 
+        width: 150px
+
+        @media (max-width: $screenXL)
+            position: absolute
+            top: 45px
+            right: -5px
+
+        @media (max-width: $screenL)
+            position: relative
+            top: auto
+            right: auto
+
+    .select-styled, .select-styled.active
+        padding-left: 40px
+
+    .select .select-options li 
+        padding-left: 24px
+
+    .public-lesson 
+
+        &+.select-styled 
+            background-image: url("../images/svg/eye-w.svg")
+            background-repeat: no-repeat 
+            background-size: 22px 16px 
+            background-position: top 6px left 9px
+
+    .lesson-date
+
+        &+.select-styled
+            background-image: url("../images/svg/calendar.svg")
+            background-repeat: no-repeat 
+            background-size: 16px 15px 
+            background-position: top 6px left 13px
+
+    .lesson-draft
+
+        &+.select-styled
+            background-image: url("../images/svg/draft.svg")
+            background-repeat: no-repeat 
+            background-size: 20px 20px 
+            background-position: top 4px left 16px

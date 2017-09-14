@@ -1,0 +1,16 @@
+<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>&#208;&#167;&#208;&#181;&#209;&#128;&#208;&#189;&#208;&#190;&#208;&#178;&#208;&#184;&#208;&#186;</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(376 -1389)">
+<g id="&#208;&#167;&#208;&#181;&#209;&#128;&#208;&#189;&#208;&#190;&#208;&#178;&#208;&#184;&#208;&#186;">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-376 1389)" fill="#FFFFFF"/>
+<use xlink:href="#path1_fill" transform="translate(-376 1389)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 16 17.9998C 16 19 14.9999 19.9998 14 19.9998L 2 19.9998C 0.999939 20 -6.10296e-05 19 2.79351e-09 17.9998L 2.79351e-09 4.99976C 6.10407e-05 3.99951 0.999939 2.99976 2 2.99976L 12 2.99976L 10 5L 2.99994 5C 2.44763 5 1.99994 5.44775 1.99994 6L 1.99994 17C 1.99994 17.5522 2.44763 18 2.99994 18L 12.9999 18C 13.5522 18 13.9999 17.5522 13.9999 17L 13.9999 11L 16 9L 16 17.9998Z"/>
+<path id="path1_fill" d="M 5 15L 5 12L 17 0L 20 3L 8 15L 5 15Z"/>
+</defs>
+</svg>

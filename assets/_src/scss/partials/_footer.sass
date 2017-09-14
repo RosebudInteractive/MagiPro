@@ -2,9 +2,22 @@
     padding: 20px 0 11px 0
     margin-top: 36px
     border-top: 1px solid rgba(0, 0, 0, 0.25)
+    position: relative
 
     @media (max-width: $screenXL)
         margin-top: 46px
+        border-top: none
+
+    &:after
+        @media (max-width: $screenXL)
+            content: ''
+            width: 100%
+            position: absolute
+            left: 0
+            top: 54%
+            height: 1px
+            background-color: rgba(0, 0, 0, 0.25)
+
 
     .layout-positioner
         width: calc(100% - 30px)
@@ -28,3 +41,43 @@
             display: block
             width: 100%
             height: 100%
+
+    &__language-picker
+        padding-bottom: 8px
+        font-size: 0
+
+        @media (max-width: $screenXL)
+            margin-top: 2%
+            padding-left: 4%
+            margin-bottom: 3%
+
+        ul 
+            display: inline-block
+            vertical-align: top
+            margin: 0
+            padding: 0
+            list-style: none
+
+        li 
+            display: inline-block
+            vertical-align: top
+            margin-right: 22px
+
+            &:not(.picked)
+                cursor: pointer
+
+            &.picked a
+                color: $c-red
+
+            a
+                font-size: 14px
+                line-height: 20px
+                color: rgba(255, 255, 255, 0.65)
+
+    &__language-picker-title
+        display: inline-block
+        vertical-align: top
+        margin-right: 16px
+        font-size: 14px
+        line-height: 20px
+        color: #fff

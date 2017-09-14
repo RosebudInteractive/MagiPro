@@ -8,9 +8,11 @@ import { fetchAccount } from '../actions/root'
 import fetch from 'isomorphic-fetch';
 
 import Root from '../containers/Root';
+import CourseWrapper from '../containers/CourseWrapper'
 import CoursesWrapper from '../containers/CoursesWrapper';
 import Participants from '../components/Participants'
 import ParticipantsWrapper from '../components/ParticipantsWrapper'
+import Course from '../components/Course';
 import Courses from '../components/Courses';
 
 
@@ -76,6 +78,22 @@ const routes = [
       //   ]
       // },
       {
+        path: '/course',
+        component: CourseWrapper,
+        loadData: (dispatch) => new Promise((resolve, reject) => {
+          // dispatch(fetchCourses2(() => {
+            resolve('loadData set cours')
+          // }))
+        }),
+        routes: [
+          {
+            path: '/course',
+            exact: true,
+            component: Course
+          }
+        ]
+      },
+      {
         path: '/courses',
         component: CoursesWrapper,
         loadData: (dispatch) => new Promise((resolve, reject) => {
@@ -114,7 +132,7 @@ const routes = [
           // dispatch(fetchCourses(() => { // pass promise callback 
           //   resolve('loadData set courses');
           // }));
-          dispatch(fetchParticipants(()=> {
+          dispatch(fetchParticipants(() => {
             resolve('loadData set ParticipantsWrapper')
           }))
         }),

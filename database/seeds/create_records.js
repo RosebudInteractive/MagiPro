@@ -30,9 +30,29 @@ setTimeout(() => {
                                                     db.Language_i18n.create({ language_id: 1, name: 'Russian', translation_language_id: 2 }).then(lang_i18n => {
                                                       db.Language_i18n.create({ language_id: 2, name: 'Английский', translation_language_id: 1 }).then(lang_i18n => {
                                                         db.Language_i18n.create({ language_id: 2, name: 'English', translation_language_id: 2 }).then(lang_i18n => {
-                                                          setTimeout(() => {
-                                                            process.exit(1);
-                                                          }, 300)
+                                                          db.Lesson.create({ account_id: 1, course_id: 1, author_id: 1, state: 'P', name: 'Backend-разработка на PHP' }).then(lesson => {
+                                                            db.Lesson.create({ account_id: 1, course_id: 1, author_id: 1, state: 'D', name: 'Управление финансовыми рисками' }).then(lesson => {
+                                                              db.Lesson.create({ account_id: 1, course_id: 1, author_id: 1, state: 'A', name: 'Зачем государства помогают иностранным стартапам' }).then(lesson => {
+                                                                db.Lesson.create({ account_id: 1, course_id: 1, author_id: 1, state: 'P', name: 'Backend-разработка на JAVA' }).then(lesson => {
+                                                                  db.Lesson.create({ account_id: 1, course_id: 1, author_id: 1, state: 'D', name: 'Backend-разработка на C++' }).then(lesson => {
+                                                                    db.LessonToCourse.create({ account_id: 1, course_id: 1, lesson_id: 1, orderNum: 1 }).then(lesson => {
+                                                                      db.LessonToCourse.create({ account_id: 1, course_id: 1, lesson_id: 2, orderNum: 2 }).then(lesson => {
+                                                                        db.LessonToCourse.create({ account_id: 1, course_id: 1, lesson_id: 3, orderNum: 3 }).then(lesson => {
+                                                                          db.LessonToCourse.create({ account_id: 1, course_id: 1, lesson_id: 4, orderNum: 4 }).then(lesson => {
+                                                                            db.LessonToCourse.create({ account_id: 1, course_id: 1, lesson_id: 5, orderNum: 5 }).then(lesson => {
+                                                                              setTimeout(() => {
+                                                                                process.exit(1);
+                                                                              }, 300)
+                                                                            })
+                                                                          })
+                                                                        })
+                                                                      })
+                                                                    })
+                                                                  })
+                                                                })
+                                                              })
+                                                            })
+                                                          })
                                                         })
                                                       })
                                                     })

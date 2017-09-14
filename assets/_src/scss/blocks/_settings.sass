@@ -1,0 +1,259 @@
+.settings-form
+    @media (max-width: $screenL)
+        margin-top: 24px
+
+    &__wrapper 
+        display: flex 
+        justify-content: space-between
+        margin-bottom: 44px
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+
+        @media (max-width: $screenXL)
+            margin-bottom: 28px
+
+        @media (max-width: $screenL)
+            display: block
+            margin-bottom: 38px
+
+    &__upload
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        opacity: 0
+        z-index: 1
+        cursor: pointer
+
+        &:hover + .settings__image-wrapper
+            opacity: 0.9
+
+    &__field-wrapper
+        position: relative
+        box-sizing: border-box
+        margin-bottom: 22px
+        width: 100%
+
+        @media (max-width: $screenXL)
+            margin-bottom: 30px
+
+        @media (max-width: $screenL)
+            margin-bottom: 23px
+
+    &__label
+        display: block
+        font-size: 14px
+        line-height: 20px
+        color: rgba(255, 255, 255, 0.5)
+        transition: color 0.4s ease
+
+        @media (max-width: $screenL)
+            font-size: 13px
+            line-height: 17px
+
+        .empty & 
+            color: rgba(255, 255, 255, 0)
+
+    &__delete
+        position: absolute
+        right: 0
+        bottom: 7px
+        width: 18px
+        height: 18px
+        font-size: 0
+        background-image: url("../images/svg/x.svg")
+        opacity: 1
+        cursor: pointer 
+        transition: opacity 0.4s ease
+
+        &:hover 
+            opacity: 0.4
+
+    &__field 
+        display: block
+        box-sizing: border-box 
+        width: 100%
+        font-size: 18px
+        line-height: 28px
+        background-color: rgba(255, 255, 255, 0)
+        border: none 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+        padding-right: 25px
+        outline: none
+
+        @media (max-width: $screenL)
+            font-size: 16px
+            line-height: 21px
+
+    &__textarea 
+        width: 100%
+        height: 196px
+        font-size: 18px
+        line-height: 21px
+        background-color: rgba(255, 255, 255, 0)
+        border: none 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+        resize: none
+        outline: none
+
+        @media (max-width: $screenXL)
+            height: 277px
+
+        @media (max-width: $screenL)
+            font-size: 16px
+            line-height: 21px
+            height: 300px
+
+    &__btns 
+        font-size: 0
+
+.settings
+
+    .select 
+        width: 100%
+
+        .select-styled 
+            padding: 0
+            font-size: 18px
+            line-height: 28px
+            color: #fff
+            background-color: rgba(255, 255, 255, 0)
+            border-radius: 0
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+            @media (max-width: $screenL)
+                font-size: 16px
+                line-height: 21px
+
+        .select-options
+            background-color: rgba(47,47,47,0.9)
+            border-radius: 0
+            padding-bottom: 20px
+
+        .select-options li
+            margin-left: -15px
+            font-size: 18px
+            line-height: 28px
+
+    &__col
+        flex-grow: 1
+        padding-bottom: 19px
+
+        @media (max-width: $screenL)
+            display: block
+            width: 100% !important
+            padding-bottom: 5px
+
+        &:first-child 
+            margin-right: 100px
+
+        &:nth-child(2)
+            padding-top: 28px
+
+            @media (max-width: $screenL)
+                padding-top: 0
+
+        &._left
+            width: 30%
+            margin-right: 43px
+
+    &__col-row
+        display: flex
+        align-items: flex-end
+        margin-bottom: 36px
+
+    &__image
+        position: relative
+
+    &__image-name 
+        margin-bottom: 0
+
+    &__image-wrapper
+        margin-right: 20px
+        width: 106px
+        height: 79px
+        overflow: hidden
+        transition: opacity 0.4s ease
+
+        img 
+            display: block
+            width: 100%
+            height: auto
+
+    &__image-btn
+        position: absolute
+        top: -18px
+        right: 5px
+        width: 32px
+        height: 32px
+        text-align: center
+        font-size: 30px
+        line-height: 13px
+        color: #2f2f2f
+        background-color: #fff 
+        border-radius: 50%
+
+    &__authors-title
+        font-size: 18px
+        line-height: 40px
+        color: #fff
+
+    &__add-author
+        font-size: 18px
+        line-height: 30px
+        color: rgba(255, 255, 255, 0.6)
+
+        @media (max-width: $screenL)
+            font-size: 16px
+            line-height: 25px
+
+    &__authors 
+        margin-bottom: 84px
+
+        @media (max-width: $screenXL)
+            margin-bottom: 40px
+
+        ul 
+            margin: 0
+            padding: 0
+            list-style: none 
+
+        li 
+            position: relative
+            font-size: 18px
+            line-height: 25px
+            color: #fff
+            white-space: nowrap
+
+            @media (max-width: $screenL)
+                font-size: 16px
+                line-height: 25px
+
+            span 
+                display: inline-block
+                vertical-align: middle
+
+            .settings-form__delete
+                position: static
+                display: inline-block
+                vertical-align: middle
+                margin-right: 10px
+                opacity: 1
+
+.btn-save
+    margin-right: 18px
+    min-width: 192px
+    outline: none
+
+    @media (max-width: $screenXL)
+        min-width: 206px
+
+    @media (max-width: $screenL)
+        width: 100%
+        margin-right: 0
+        min-width: 0
+
+.btn-reset
+    @media (max-width: $screenL)
+        display: block !important
+        margin: 27px auto 1px

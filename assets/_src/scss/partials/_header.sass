@@ -149,7 +149,6 @@
                     opacity: 1
 
                 &:before
-                    //transform: rotate(180deg)
                     +retina-sprite($icon-arrow-down-hov-group)
 
             ul
@@ -168,21 +167,23 @@
 
                 li
                     display: block
-                    font-size: 18px
-                    line-height: 21px
                     list-style-type: none
-                    color: rgba(255, 255, 255, 0.65)
                     margin: 0 auto 16px
                     padding-left: 28px
                     position: relative
-                    transition: color .2s ease-in-out
-                    transform: translateZ(0)
 
                     &:last-child
                         margin-bottom: 0
 
-                    &:hover
+                    &:hover a
                         color: #fff
+
+                    a
+                        font-size: 18px
+                        line-height: 21px
+                        color: rgba(255, 255, 255, 0.65)
+                        transition: color .2s ease-in-out
+                        transform: translateZ(0)
 
                     &._exit
                         &:before

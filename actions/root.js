@@ -42,6 +42,13 @@ export const setAccount = (account) => {
   }
 }
 
+export const setAccountLeadingCourse = (courseId) => {
+  return {
+    type: 'SET_ACCOUNT_LEADING_COURSE',
+    payload: courseId
+  }
+}
+
 export const setLanguages = (languages) => {
   return {
     type: 'SET_LANGUAGES',

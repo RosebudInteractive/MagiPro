@@ -12,6 +12,8 @@ export default (state = initialState, action) => {
       return Object.assign({}, state, { isLoaded: action.payload });
     case 'SET_ACCOUNT':
       return Object.assign({}, state, { account: action.payload });
+    case 'SET_ACCOUNT_LEADING_COURSE': 
+      return Object.assign({}, state, { account: Object.assign({}, state.account, { leadingCourse : action.payload} ) })
     case 'SET_LANGUAGES':
       return Object.assign({}, state, { languages: action.payload });
     case 'SET_ACTIVE_LANGUAGE':

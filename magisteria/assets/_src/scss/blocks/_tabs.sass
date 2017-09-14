@@ -1,0 +1,18 @@
+.tabs 
+    margin: 0
+    padding: 0
+    list-style: none 
+
+    &>li 
+        display: none
+        padding: 64px 0 0 0
+        width: 100%
+
+        @media (max-width: $screenXL)
+            padding: 50px 0 0 0
+
+        @media (max-width: $screenL)
+            padding: 16px 0 0 0
+
+        &.current 
+            display: block

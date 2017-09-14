@@ -1,0 +1,14 @@
+<svg width="13" height="16" viewBox="0 0 13 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Lock_16</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(224 -1132)">
+<g id="Lock_16">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-224 1132)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 11 7C 11 5.992 11 4.573 11 4.5C 11 2.015 8.985 0 6.5 0C 4.015 0 2 2.015 2 4.5C 2 4.573 2 5.992 2 7C 0.896 7 0 7.896 0 9L 0 14C 0 15.104 0.896 16 2 16L 11 16C 12.104 16 13 15.104 13 14L 13 9C 13 7.896 12.104 7 11 7ZM 4 4.5C 4 3.119 5.119 2 6.5 2C 7.881 2 9 3.119 9 4.5C 9 4.671 9 7 9 7L 4 7C 4 7 4 4.671 4 4.5ZM 6.527 13.01C 5.681 13.01 4.996 12.325 4.996 11.48C 4.996 10.633 5.682 9.948 6.527 9.948C 7.372 9.948 8.058 10.634 8.058 11.48C 8.059 12.325 7.373 13.01 6.527 13.01Z"/>
+</defs>
+</svg>

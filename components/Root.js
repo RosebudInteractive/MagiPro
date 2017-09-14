@@ -15,6 +15,7 @@ class Root extends React.Component {
     console.log('ROOT'.inverse)
     console.log(props);
 
+    //TODO MOVE HEADER TO DEDICATED COMPONENT
     let scrlY = 0;
     if (typeof process === 'object' && process + '' === '[object process]') {
       scrlY = 0;
@@ -32,10 +33,6 @@ class Root extends React.Component {
       //   'EN': { name: <FormattedMessage id="text.language.en" defaultMessage="English" />, id: 2 }
       // }
     }
-  }
-
-  getLanguageText = (language) => {
-    let langs = 0//;
   }
 
   scrollListener = (e) => {
@@ -63,47 +60,12 @@ class Root extends React.Component {
   //   this.setState({languageSelect: !this.state.languageSelect});
   // }
 
-  _getActiveLanguageText = () => {
-    var nextId = 'text.language.all';
-    if (this.props.activeLanguageId !== 0) {
-      this.props.languages.map(language => {
-        if (language.id === this.props.activeLanguageId) {
-          nextId = 'text.language.' + language.code.toLowerCase();
-        }
-      })
-    }
-    return <FormattedMessage id={nextId} defaultMessage="All" />
-  }
-
-  _getLanguageOptions = () => {
-
-    var langs = [];
-
-    if (this.props.activeLanguageId !== 0) {
-      langs.push(<li key={-1} onClick={() => this.props.setActiveLanguageId(0)}>
-        <FormattedMessage id='text.language.all' defaultMessage="All" />
-      </li>)
-    }
-
-    this.props.languages.map((language, idx) => {
-      if (this.props.activeLanguageId !== language.id) {
-        langs.push(<li key={idx} onClick={() => this.props.setActiveLanguageId(language.id)}>
-          <FormattedMessage id={'text.language.' + language.code.toLowerCase()} defaultMessage={language.code} />
-        </li>)
-      }
-    })
-
-    return langs;
-  }
+  
 
   render() {
     var headerStyle = classNames({
       'header': true,
       '_fixed': this.state.scrollY > 0 ? true : false,
-    })
-    var selectStyle = classNames({
-      'select-styled': true,
-      'active': this.props.languageSelect,
     })
     // console.log('ROOT::::::')
     // console.log(this.props)
@@ -141,35 +103,9 @@ class Root extends React.Component {
             </div>
           </div>
         </div>
-        <div className="main">
-          <div className="filters">
-            <div className="layout-positioner">
-              <div className="filters__course">
-                <FormattedMessage id="text.navigation.label" defaultMessage="Courses" /> <span>+</span>
-              </div>
-              <div className="filters__list-wrap clearfix">
-                <ul className="filters__list clearfix">
-                  <MenuLinkLi to="/courses" activeOnlyWhenExact={true} menuLabel={<FormattedMessage id="links.navigation.all" defaultMessage="All" />} />
-                  <MenuLinkLi to="/courses/public" menuLabel={<FormattedMessage id="links.navigation.public" defaultMessage="Public" />} />
-                  <MenuLinkLi to="/courses/draft" menuLabel={<FormattedMessage id="links.navigation.draft" defaultMessage="Draft" />} />
-                  <li className="filters__item filter-select">
-                    <div className="select" onClick={this.props.toggleLanguageSelect}>
-                      <div className={selectStyle}>{this._getActiveLanguageText()}</div>
-                      <ul className="select-options" style={{ display: this.props.languageSelect ? 'block' : 'none' }}>
-                        {this._getLanguageOptions()}
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-                <div className="filters__archive" onClick={() => this.props.history.push('/courses/archive')}></div>
-              </div>
-            </div>
-          </div>
-          {renderRoutes(this.props.route.routes, {
-            ...this.props
-          })}
-        </div>
-        <Footer changeLang={this.props.setInterfaceLang} />
+        {/* main */}
+        {renderRoutes(this.props.route.routes, { ...this.props, scrollY: this.state.scrollY })}
+        <Footer setInterfaceLang={this.props.setInterfaceLang} currentLocale={this.props.intl.locale} />
       </div>
     )
   }

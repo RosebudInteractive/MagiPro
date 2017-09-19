@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import PropTypes from 'prop-types'
 const colors = require('colors');
+import Courses from './Courses';
+import qs from 'query-string';
 
 import { renderRoutes, matchRoutes } from 'react-router-config'
 
@@ -12,40 +14,35 @@ class CoursesWrapper extends React.Component {
     // console.log(props);
   }
   render() {
-    const { courses, route, location, activeLanguageId } = this.props
+    const { courses, route, location, languages } = this.props
     const matchedRoute = matchRoutes(route.routes, location.pathname);
-    
-    if (matchedRoute.length > 0) {
-      let filter = matchedRoute[0].route.filterData();
-      let courses_filtered = courses.courses.filter(course => {
+    const queryString = qs.parse(location.search);
+    const filterLang = queryString.filterLang !== undefined ? parseInt(queryString.filterLang) : 0;
+    const filterType = queryString.filterType !== undefined ? queryString.filterType : 'ALL';
 
-        if (activeLanguageId === 0) {
-          if (filter === 'ALL') {
-            if (course.state === 'A') return false;
-            else return true;
-          } else {
-            if (course.state === filter) return true;
-            else return false;
-          }
+    queryString.filterLang = filterLang
+    queryString.filterType = filterType
+
+    let courses_filtered = courses.courses.filter(course => {
+      if (filterLang === 0) {
+        if (filterType === 'ALL') {
+          if (course.state === 'A') return false;
+          else return true;
         } else {
-          if (filter === 'ALL') {
-            if (course.state === 'A') return false;
-            else if (course.language_id === activeLanguageId) return true;
-          } else {
-            if (course.state === filter && course.language_id === activeLanguageId) return true;
-            else return false;
-          }
+          if (course.state === filterType) return true;
+          else return false;
         }
-        
-      });
-      return <div>{renderRoutes(route.routes, { ...this.props, courses: { courses:[...courses_filtered]} })}</div>
-    } else {
-      return (
-        <div>
-          {renderRoutes(route.routes, { ...this.props })}
-        </div>
-      )
-    }
+      } else {
+        if (filterType === 'ALL') {
+          if (course.state === 'A') return false;
+          else if (course.language_id === filterLang) return true;
+        } else {
+          if (course.state === filterType && course.language_id === filterLang) return true;
+          else return false;
+        }
+      }
+    });
+    return <Courses {...this.props} courses={{ courses: [...courses_filtered] }} queryString={queryString} />
   }
 }
 

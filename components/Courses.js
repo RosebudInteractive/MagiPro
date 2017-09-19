@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames'
 import MenuLink, { MenuLinkLi } from './MenuLink';
 import { renderRoutes } from 'react-router-config'
+import qs from 'query-string';
 
 var colors = require('colors')
 class Courses extends React.PureComponent {
@@ -78,9 +79,9 @@ class Courses extends React.PureComponent {
 
   _getActiveLanguageText = () => {
     var nextId = 'text.language.all';
-    if (this.props.activeLanguageId !== 0) {
+    if (this.props.queryString.filterLang !== 0) {
       this.props.languages.map(language => {
-        if (language.id === this.props.activeLanguageId) {
+        if (language.id === this.props.queryString.filterLang) {
           nextId = 'text.language.' + language.code.toLowerCase();
         }
       })
@@ -88,27 +89,63 @@ class Courses extends React.PureComponent {
     return <FormattedMessage id={nextId} defaultMessage="All" />
   }
 
+  _getFilterLink = (filterObj) => {
+    const { filterLang, filterType } = filterObj
+    if (filterLang && filterType) {
+      return '?filterLang=' + filterLang + '&filterType=' + filterType
+    } else if (filterLang && filterLang !== 0) {
+      return '?filterLang=' + filterLang
+    } else if (filterType && filterType !== 'ALL') {
+      return '?filterType=' + filterType
+    }
+    return ''
+  }
+
   _getLanguageOptions = () => {
     var langs = [];
-    if (this.props.activeLanguageId !== 0) {
-      langs.push(<li key={-1} onClick={() => this.props.setActiveLanguageId(0)}>
+    if (this.props.queryString.filterLang !== 0) {
+      langs.push(<li key={-1} onClick={() => this.props.history.push(location.pathname +
+        this._getFilterLink({
+          filterLang: 0,
+          filterType: this.props.queryString.filterType
+        }))}>
         <FormattedMessage id='text.language.all' defaultMessage="All" />
       </li>)
     }
     this.props.languages.map((language, idx) => {
-      if (this.props.activeLanguageId !== language.id) {
-        langs.push(<li key={idx} onClick={() => this.props.setActiveLanguageId(language.id)}>
+      if (this.props.queryString.filterLang !== language.id) {
+        langs.push(<li key={idx} onClick={() => this.props.history.push(location.pathname +
+          this._getFilterLink({
+            filterLang: language.id,
+            filterType: this.props.queryString.filterType
+          }))}>
           <FormattedMessage id={'text.language.' + language.code.toLowerCase()} defaultMessage={language.code} />
         </li>)
       }
     })
     return langs;
   }
+  // _getLanguageOptions = () => {
+  //   var langs = [];
+  //   if (this.props.queryString.filterLang !== 0) {
+  //     langs.push(<li key={-1} onClick={() => this.props.setActiveLanguageId(0)}>
+  //       <FormattedMessage id='text.language.all' defaultMessage="All" />
+  //     </li>)
+  //   }
+  //   this.props.languages.map((language, idx) => {
+  //     if (this.props.queryString.filterLang !== language.id) {
+  //       langs.push(<li key={idx} onClick={() => this.props.setActiveLanguageId(language.id)}>
+  //         <FormattedMessage id={'text.language.' + language.code.toLowerCase()} defaultMessage={language.code} />
+  //       </li>)
+  //     }
+  //   })
+  //   return langs;
+  // }
 
   render() {
-    const { courses, account } = this.props
-    // console.log('Courses:')
-    // console.log(this.props);
+    const { courses, account, location } = this.props
+    console.log('Courses:'.inverse)
+    console.log(this.props);
     var selectStyle = classNames({
       'select-styled': true,
       'active': this.props.languageSelect,
@@ -123,9 +160,18 @@ class Courses extends React.PureComponent {
             </div>
             <div className="filters__list-wrap clearfix">
               <ul className="filters__list clearfix">
-                <li><MenuLink to="/courses" activeOnlyWhenExact={true} menuLabel={<FormattedMessage id="links.navigation.all" defaultMessage="All" />} /></li>
-                <li><MenuLink to="/courses/public" menuLabel={<FormattedMessage id="links.navigation.public" defaultMessage="Public" />} /></li>
-                <li><MenuLink to="/courses/draft" menuLabel={<FormattedMessage id="links.navigation.draft" defaultMessage="Draft" />} /></li>
+                <li><MenuLink linkActive={this.props.queryString.filterType === 'ALL' ? true : false} to={location.pathname + this._getFilterLink({
+                  filterLang: this.props.queryString.filterLang,
+                  filterType: 'ALL'
+                })} activeOnlyWhenExact={true} menuLabel={<FormattedMessage id="links.navigation.all" defaultMessage="All" />} /></li>
+                <li><MenuLink linkActive={this.props.queryString.filterType === 'P' ? true : false} to={location.pathname + this._getFilterLink({
+                  filterLang: this.props.queryString.filterLang,
+                  filterType: 'P'
+                })} menuLabel={<FormattedMessage id="links.navigation.public" defaultMessage="Public" />} /></li>
+                <li><MenuLink linkActive={this.props.queryString.filterType === 'D' ? true : false} to={location.pathname + this._getFilterLink({
+                  filterLang: this.props.queryString.filterLang,
+                  filterType: 'D'
+                })} menuLabel={<FormattedMessage id="links.navigation.draft" defaultMessage="Draft" />} /></li>
                 <li className="filters__item filter-select">
                   <div className="select" onClick={this.props.toggleLanguageSelect}>
                     <div className={selectStyle}>{this._getActiveLanguageText()}</div>
@@ -135,7 +181,10 @@ class Courses extends React.PureComponent {
                   </div>
                 </li>
               </ul>
-              <div className="filters__archive" onClick={() => this.props.history.push('/courses/archive')}></div>
+              <div className="filters__archive" onClick={() => this.props.history.push(location.pathname + this._getFilterLink({
+                filterLang: this.props.queryString.filterLang,
+                filterType: 'A'
+              }))}></div>
             </div>
           </div>
         </div>

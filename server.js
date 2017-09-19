@@ -83,6 +83,10 @@ app.post('/api/course/main', function(req, res, next) {
   })
 });
 
+app.get('/favicon.ico', function(req,res,next) {
+  res.send(JSON.stringify({}));
+})
+
 app.post('/api/course/:id', function(req, res, next) {
   if (req.params.id) {
     db.Course.findOne({ where: {

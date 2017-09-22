@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel --plugins transform-react-jsx client.js --out-file ./static/bundle.js",
-    "start": "webpack && babel-node server.js --presets react,es2015,stage-2"
+    "start": "webpack && babel-node server.js --presets react,es2015,stage-2",
+    "start:client" : "webpack --watch",
+    "start:server" : "babel-watch server.js --presets react,es2015,stage-2"
   },
   "author": "",
   "license": "ISC",

@@ -12,6 +12,7 @@ import Root from '../conts/Root';
 import DomainOrLocale from '../comps/DomainOrLocale'
 import SystemPageOrLocale from '../comps/SystemPageOrLocale'
 import SystemPageOrPage from '../comps/SystemPageOrPage'
+import SystemPageWithdata from '../comps/SystemPageWithdata'
 
 // import Root from '../containers/Root';
 // import CourseWrapper from '../containers/CourseWrapper'
@@ -318,8 +319,8 @@ const routes = [
                 },
                 routes: [
                   {
-                    path: '/:domain_or_locale/:system_page_or_locale/:system_page_or_page/:name_or_id',
-                    component: NameOrId,
+                    path: '/:domain_or_locale/:system_page_or_locale/:system_page_or_page/:system_page_with_data',
+                    component: SystemPageWithdata,
                     reservedPath: {
                       locales,
                       systemNames: systemNames2,

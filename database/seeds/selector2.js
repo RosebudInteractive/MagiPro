@@ -3,13 +3,19 @@ var colors = require('colors')
 var fs = require('fs');
 let dt =process.hrtime();
 
-
-db.Lesson.findAll({
+db.Author.findAll({
   include: [{
-    model: db.Author
+    model: db.Lesson
   }]
-}).then(lessons => {
-
-  console.log('lessons'.inverse)
-  console.log(lessons);
+}).then(authors => {
+  console.log(authors);
 })
+// db.Lesson.findAll({
+//   include: [{
+//     model: db.Author
+//   }]
+// }).then(lessons => {
+
+//   console.log('lessons'.inverse)
+//   console.log(lessons);
+// })

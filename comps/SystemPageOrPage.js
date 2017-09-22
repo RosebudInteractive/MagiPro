@@ -26,9 +26,7 @@ class SystemPageOrPage extends React.PureComponent {
       }
       if (mRoute.match.params.system_page_or_page.toUpperCase() === 'COURSE') {
         return (
-          <div>COURSE
-            {renderRoutes(route.routes, { ...this.props })}
-          </div>
+          renderRoutes(route.routes, { ...this.props })
         )
       }
       return (

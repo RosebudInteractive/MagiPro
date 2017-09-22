@@ -5,6 +5,9 @@ import { Route, Link, Redirect } from 'react-router-dom'
 import { renderRoutes, matchRoutes } from 'react-router-config'
 import colors from 'colors';
 
+// import CourseWrapper from '../containers/CourseWrapper';
+import Course from '../components/Course';
+
 class SystemPageWithdata extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -13,11 +16,21 @@ class SystemPageWithdata extends React.PureComponent {
     console.log(props);
   }
   render() {
-    // const { route, location, match, history, mRoute, routeObject } = this.props;
-    console.log('SystemPageWithdata=====================')
-    return (
-      <div>SystemPageWithdata</div>
-    )
+    const { route, location, match, history, mRoute, routeObject } = this.props;
+
+    let course = null;
+    this.props.account.courses.map(c=> {
+      if (parseInt(c.id) === parseInt(mRoute.match.params.system_page_with_data)) {
+        course = c;
+      }
+    })
+
+    if (mRoute.match.params.system_page_or_page.toUpperCase() === 'COURSE') {
+      return (
+        // <div>SystemPageWithdata:{mRoute.match.params.system_page_with_data}</div>
+        <Course {...this.props} course={course} />
+      )
+    }
     // console.log(mRoute);
     // if (mRoute.route.reservedPath.locales.indexOf(mRoute.match.params.system_page_or_locale.toUpperCase()) !== -1) {
     //   console.log('locale')

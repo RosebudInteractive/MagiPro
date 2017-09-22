@@ -143,7 +143,7 @@ class Courses extends React.PureComponent {
   // }
 
   render() {
-    const { courses, account, location } = this.props
+    const { courses, account, location, routeObject } = this.props
     console.log('Courses:'.inverse)
     console.log(this.props);
     var selectStyle = classNames({
@@ -202,7 +202,9 @@ class Courses extends React.PureComponent {
                     </div>
                   ) : ''}
                 </div>
-                <div className="courses__course-descr">{course.name}
+                <div className="courses__course-descr" onClick={() => {
+                  this.props.history.push('/' + routeObject.domain + '/' + routeObject.locale + '/course/' + course.id)
+                }}>{course.name}
                   <span className="author">
                     {this._getCourseAuthors(course)}
                   </span>

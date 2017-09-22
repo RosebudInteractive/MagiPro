@@ -36251,6 +36251,7 @@ module.exports = {
   'text.headers.profile.exit': 'Выход',
   'text.navigation.label': 'Курсы',
 
+  'text.language': 'Язык',
   'text.language.all': 'Все языки',
   'text.language.ru': 'Русский',
   'text.language.en': 'Английский',
@@ -36261,7 +36262,38 @@ module.exports = {
   'text.contextMenu.publish': 'Опубликовать',
   'text.contextMenu.draft': 'Черновик',
   'text.contextMenu.preview': 'Превью',
-  'text.contextMenu.archive': 'Архивировать'
+  'text.contextMenu.archive': 'Архивировать',
+
+  'course.tabs.lessons': 'Уроки',
+  'course.tabs.materials': 'Доп.материалы',
+  'course.tabs.properties': 'Свойства',
+
+  'course.tab.properties.dropdown.visible.label': 'Курс виден',
+  'course.tab.properties.dropdown.visible.a': 'Всем',
+  'course.tab.properties.dropdown.visible.u': 'Пользователям аккаунта',
+  'course.tab.properties.dropdown.visible.r': 'Зарегистрированным пользователям',
+
+  'course.tab.properties.dropdown.status.label': 'Статус',
+  'course.tab.properties.dropdown.status.a': 'Архивные',
+  'course.tab.properties.dropdown.status.d': 'Черновик',
+  'course.tab.properties.dropdown.status.p': 'Опубликованный',
+
+  'course.tab.properties.dropdown.language.label': 'Язык курса',
+
+  'course.tab.properties.courseCover': 'Картинка обложки',
+  'course.tab.properties.courseName': 'Название курса',
+  'course.tab.properties.courseDescription': 'Описание',
+  'course.tab.properties.courseAuthors': '{authorCount, plural, =0 {Автор курса} one {Автор курса} other {Авторы курса}}',
+  'course.tab.properties.courseAuthorsLabel': '{authorCount, plural, =0 {Автор} one {Автор} other {Авторы}}',
+
+  'course.tab.properties.button.save': 'Сохранить',
+  'course.tab.properties.button.cancel': 'Отмена',
+  'course.tab.properties.button.addAuthor': 'Добавить автора',
+
+  'course.tab.lessons.label.lection': 'Лекция',
+  'course.tab.lessons.label.archived': 'Архивирована',
+  'course.tab.lessons.label.restore': 'Восстановить',
+  'course.tab.lessons.label.remove': 'Удалить'
 };
 
 /***/ }),
@@ -36281,6 +36313,7 @@ module.exports = {
   'text.headers.profile.exit': 'Exit',
   'text.navigation.label': 'Courses',
 
+  'text.language': 'Language',
   'text.language.all': 'All',
   'text.language.ru': 'Russian',
   'text.language.en': 'English',
@@ -36291,7 +36324,38 @@ module.exports = {
   'text.contextMenu.publish': 'Publish',
   'text.contextMenu.draft': 'Draft',
   'text.contextMenu.preview': 'Preview',
-  'text.contextMenu.archive': 'Archive'
+  'text.contextMenu.archive': 'Archive',
+
+  'course.tabs.lessons': 'Lessons',
+  'course.tabs.materials': 'Additional materials',
+  'course.tabs.properties': 'Properties',
+
+  'course.tab.properties.dropdown.visible.label': 'Course is visible',
+  'course.tab.properties.dropdown.visible.a': 'All',
+  'course.tab.properties.dropdown.visible.u': 'Account users',
+  'course.tab.properties.dropdown.visible.r': 'Registered users',
+
+  'course.tab.properties.dropdown.status.label': 'Status',
+  'course.tab.properties.dropdown.status.a': 'Archive',
+  'course.tab.properties.dropdown.status.d': 'Draft',
+  'course.tab.properties.dropdown.status.p': 'Published',
+
+  'course.tab.properties.dropdown.language.label': 'Course language',
+
+  'course.tab.properties.courseCover': 'Cover',
+  'course.tab.properties.courseName': 'Course name',
+  'course.tab.properties.courseDescription': 'Description',
+  'course.tab.properties.courseAuthors': '{authorCount, plural, =0 {Course author} one {Course author} other {Course authors}}',
+  'course.tab.properties.courseAuthorsLabel': '{authorCount, plural, =0 {Author} one {Author} other {Authors}}',
+
+  'course.tab.properties.button.save': 'Save',
+  'course.tab.properties.button.cancel': 'Cancel',
+  'course.tab.properties.button.addAuthor': 'Add author',
+
+  'course.tab.lessons.label.lection': 'Lection',
+  'course.tab.lessons.label.archived': 'Archived',
+  'course.tab.lessons.label.restore': 'Restore',
+  'course.tab.lessons.label.remove': 'Remove'
 
 };
 
@@ -36312,6 +36376,7 @@ module.exports = {
   'text.headers.profile.exit': 'Sortie',
   'text.navigation.label': 'Cours',
 
+  'text.language': 'Langue',
   'text.language.all': 'Tous',
   'text.language.ru': 'Russe',
   'text.language.en': 'Anglais',
@@ -36322,7 +36387,38 @@ module.exports = {
   'text.contextMenu.publish': 'Publier',
   'text.contextMenu.draft': 'Brouillon',
   'text.contextMenu.preview': 'Aperçu',
-  'text.contextMenu.archive': 'Archives'
+  'text.contextMenu.archive': 'Archives',
+
+  'course.tabs.lessons': 'Leçons',
+  'course.tabs.materials': 'Matériaux supplémentaires',
+  'course.tabs.properties': 'Propriétés',
+
+  'course.tab.properties.dropdown.visible.label': 'Le cours est visible',
+  'course.tab.properties.dropdown.visible.a': 'Tout le monde',
+  'course.tab.properties.dropdown.visible.u': 'Utilisateurs du compte',
+  'course.tab.properties.dropdown.visible.r': 'Utilisateurs enregistrés',
+
+  'course.tab.properties.dropdown.status.label': 'Statut',
+  'course.tab.properties.dropdown.status.a': 'Archives',
+  'course.tab.properties.dropdown.status.d': 'Brouillon',
+  'course.tab.properties.dropdown.status.p': 'Publier',
+
+  'course.tab.properties.dropdown.language.label': 'Langue de cours',
+
+  'course.tab.properties.courseCover': 'Photo de couverture',
+  'course.tab.properties.courseName': 'Nom du cours',
+  'course.tab.properties.courseDescription': 'Description',
+  'course.tab.properties.courseAuthors': '{authorCount, plural, =0 {Auteur du cours} one {Auteur du cours} other {Les auteurs du cours}}',
+  'course.tab.properties.courseAuthorsLabel': '{authorCount, plural, =0 {Auteur} one {Auteur} other {Auteurs}}',
+
+  'course.tab.properties.button.save': 'Enregistrer',
+  'course.tab.properties.button.cancel': 'Annulation',
+  'course.tab.properties.button.addAuthor': 'Ajouter un auteur',
+
+  'course.tab.lessons.label.lection': 'Leçon',
+  'course.tab.lessons.label.archived': 'Archivé',
+  'course.tab.lessons.label.restore': 'Restaurer',
+  'course.tab.lessons.label.remove': 'Supprimer'
 
 };
 
@@ -36560,7 +36656,7 @@ var Root = function (_React$Component) {
       scrlY = window.scrollY;
     }
 
-    _this.mRoutes = (0, _reactRouterConfig.matchRoutes)(_this.props.route.routes, _this.props.location.pathname);
+    // this.mRoutes = matchRoutes(this.props.route.routes, this.props.location.pathname);
     _this.routeObject = {};
 
     _this.state = {
@@ -36605,7 +36701,7 @@ var Root = function (_React$Component) {
       });
       // console.log('ROOT::::::')
       // console.log(this.props)
-
+      var mRoutes = (0, _reactRouterConfig.matchRoutes)(this.props.route.routes, this.props.location.pathname);
 
       return _react2.default.createElement(
         'div',
@@ -36687,7 +36783,7 @@ var Root = function (_React$Component) {
         ),
         (0, _reactRouterConfig.renderRoutes)(this.props.route.routes, _extends({}, this.props, {
           scrollY: this.state.scrollY,
-          mRoute: this.mRoutes[this.mRoutes.length - 1],
+          mRoute: mRoutes[mRoutes.length - 1],
           routeObject: this.routeObject,
           languages: this.props.languages
         })),
@@ -36836,11 +36932,8 @@ var Footer = function (_React$PureComponent) {
             _react2.default.createElement(
               'span',
               { className: 'footer__language-picker-title' },
-              _react2.default.createElement(
-                'span',
-                null,
-                '\u042F\u0437\u044B\u043A:'
-              )
+              _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'text.language', defaultMessage: 'Language' }),
+              ':'
             ),
             _react2.default.createElement(
               'ul',
@@ -36850,7 +36943,7 @@ var Footer = function (_React$PureComponent) {
                 { className: currentLocale === 'ru' ? "picked" : '' },
                 _react2.default.createElement(
                   'a',
-                  { href: '#', onClick: function onClick() {
+                  { onClick: function onClick() {
                       return setInterfaceLang('ru');
                     } },
                   _react2.default.createElement(
@@ -36865,7 +36958,7 @@ var Footer = function (_React$PureComponent) {
                 { className: currentLocale === 'en' ? "picked" : '' },
                 _react2.default.createElement(
                   'a',
-                  { href: '#', onClick: function onClick() {
+                  { onClick: function onClick() {
                       return setInterfaceLang('en');
                     } },
                   _react2.default.createElement(
@@ -36880,7 +36973,7 @@ var Footer = function (_React$PureComponent) {
                 { className: currentLocale === 'fr' ? "picked" : '' },
                 _react2.default.createElement(
                   'a',
-                  { href: '#', onClick: function onClick() {
+                  { onClick: function onClick() {
                       return setInterfaceLang('fr');
                     } },
                   _react2.default.createElement(
@@ -37696,12 +37789,7 @@ var SystemPageOrPage = function (_React$PureComponent) {
           return _react2.default.createElement(_CoursesWrapper2.default, this.props);
         }
         if (mRoute.match.params.system_page_or_page.toUpperCase() === 'COURSE') {
-          return _react2.default.createElement(
-            'div',
-            null,
-            'COURSE',
-            (0, _reactRouterConfig.renderRoutes)(route.routes, _extends({}, this.props))
-          );
+          return (0, _reactRouterConfig.renderRoutes)(route.routes, _extends({}, this.props));
         }
         return _react2.default.createElement(
           'div',
@@ -38047,7 +38135,8 @@ var Courses = function (_React$PureComponent) {
       var _props = this.props,
           courses = _props.courses,
           account = _props.account,
-          location = _props.location;
+          location = _props.location,
+          routeObject = _props.routeObject;
 
       console.log('Courses:'.inverse);
       console.log(this.props);
@@ -38166,7 +38255,9 @@ var Courses = function (_React$PureComponent) {
                 ),
                 _react2.default.createElement(
                   'div',
-                  { className: 'courses__course-descr' },
+                  { className: 'courses__course-descr', onClick: function onClick() {
+                      _this3.props.history.push('/' + routeObject.domain + '/' + routeObject.locale + '/course/' + course.id);
+                    } },
                   course.name,
                   _react2.default.createElement(
                     'span',
@@ -38328,6 +38419,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(3);
@@ -38348,6 +38441,10 @@ var _colors = __webpack_require__(27);
 
 var _colors2 = _interopRequireDefault(_colors);
 
+var _Course = __webpack_require__(351);
+
+var _Course2 = _interopRequireDefault(_Course);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38355,6 +38452,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import CourseWrapper from '../containers/CourseWrapper';
+
 
 var SystemPageWithdata = function (_React$PureComponent) {
   _inherits(SystemPageWithdata, _React$PureComponent);
@@ -38372,13 +38472,28 @@ var SystemPageWithdata = function (_React$PureComponent) {
   _createClass(SystemPageWithdata, [{
     key: 'render',
     value: function render() {
-      // const { route, location, match, history, mRoute, routeObject } = this.props;
-      console.log('SystemPageWithdata=====================');
-      return _react2.default.createElement(
-        'div',
-        null,
-        'SystemPageWithdata'
-      );
+      var _props = this.props,
+          route = _props.route,
+          location = _props.location,
+          match = _props.match,
+          history = _props.history,
+          mRoute = _props.mRoute,
+          routeObject = _props.routeObject;
+
+
+      var course = null;
+      this.props.account.courses.map(function (c) {
+        if (parseInt(c.id) === parseInt(mRoute.match.params.system_page_with_data)) {
+          course = c;
+        }
+      });
+
+      if (mRoute.match.params.system_page_or_page.toUpperCase() === 'COURSE') {
+        return (
+          // <div>SystemPageWithdata:{mRoute.match.params.system_page_with_data}</div>
+          _react2.default.createElement(_Course2.default, _extends({}, this.props, { course: course }))
+        );
+      }
       // console.log(mRoute);
       // if (mRoute.route.reservedPath.locales.indexOf(mRoute.match.params.system_page_or_locale.toUpperCase()) !== -1) {
       //   console.log('locale')
@@ -38409,6 +38524,804 @@ var SystemPageWithdata = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = SystemPageWithdata;
+
+/***/ }),
+/* 349 */,
+/* 350 */,
+/* 351 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(5);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = __webpack_require__(46);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _reactRouterConfig = __webpack_require__(18);
+
+var _reactIntl = __webpack_require__(20);
+
+var _Dropdown_1_Course = __webpack_require__(352);
+
+var _Dropdown_1_Course2 = _interopRequireDefault(_Dropdown_1_Course);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var colors = __webpack_require__(27);
+
+var Course = function (_React$Component) {
+  _inherits(Course, _React$Component);
+
+  function Course(props) {
+    _classCallCheck(this, Course);
+
+    //TODO MOVE TO REDUX STATE
+    var _this = _possibleConstructorReturn(this, (Course.__proto__ || Object.getPrototypeOf(Course)).call(this, props));
+
+    _this._getLessonStatus = function (lesson) {
+
+      var lessonSelectStyle = (0, _classnames2.default)({
+        'js-select': true,
+        'select-lesson': true,
+        'select-hidden': true, //(status === 'P' || status === 'A') ? true : false,
+        'public-lesson': lesson.state === 'P' ? true : false,
+        'lesson-draft': lesson.state === 'D' ? true : false,
+        'lesson-date': lesson.state === 'A' ? true : false
+      });
+
+      var lessonSelectDivStyle = (0, _classnames2.default)({
+        'select-styled': true,
+        'active': lesson.id === _this.state.toggleSelectLessonId ? true : false
+      });
+
+      var lessonLockStyle = (0, _classnames2.default)({
+        'lesson__lock': true,
+        'locked': lesson.state === 'A' ? true : false
+      });
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'lesson__status' },
+        _react2.default.createElement(
+          'div',
+          { className: 'select' },
+          _react2.default.createElement('select', { className: lessonSelectStyle }),
+          _react2.default.createElement(
+            'div',
+            { className: lessonSelectDivStyle, onClick: function onClick() {
+                return _this.setState({ toggleSelectLessonId: lesson.id === _this.state.toggleSelectLessonId ? 0 : lesson.id });
+              } },
+            _react2.default.createElement(_reactIntl.FormattedMessage, { id: _this._getTextStatus(lesson.state) })
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'select-options', style: { display: lesson.id === _this.state.toggleSelectLessonId ? 'block' : 'none' } },
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(_reactIntl.FormattedMessage, { id: _this._getTextStatus('A'), defaultMessage: 'Archive' })
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(_reactIntl.FormattedMessage, { id: _this._getTextStatus('D'), defaultMessage: 'Draft' })
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(_reactIntl.FormattedMessage, { id: _this._getTextStatus('P'), defaultMessage: 'Public' })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: lessonLockStyle, tabIndex: '0' },
+          'Lock'
+        )
+      );
+    };
+
+    _this._getTextStatus = function (status) {
+      if (status === 'A') {
+        return 'course.tab.properties.dropdown.status.a';
+      }
+      if (status === 'D') {
+        return 'course.tab.properties.dropdown.status.d';
+      }
+      if (status === 'P') {
+        return 'course.tab.properties.dropdown.status.p';
+      }
+      return null;
+    };
+
+    _this._getCourseAuthors = function (course) {
+      var authors = [];
+      course.authors.map(function (author, idx) {
+        author.AuthorIntl.map(function (a_intl) {
+          if (a_intl.translation_language_id === course.language_id) {
+            authors.push(_react2.default.createElement(
+              'li',
+              { key: idx },
+              _react2.default.createElement(
+                'span',
+                null,
+                a_intl.firstName + ' ' + a_intl.lastName
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'settings-form__delete' },
+                'x'
+              )
+            ));
+          }
+        });
+      });
+      return authors;
+    };
+
+    _this._getHeadCourseAuthors = function (course) {
+      var authors = '';
+      course.authors.map(function (author, idx) {
+        author.AuthorIntl.map(function (a_intl) {
+          if (a_intl.translation_language_id === course.language_id) {
+            if (idx !== 0) authors += ", ";
+            authors += a_intl.firstName + ' ' + a_intl.lastName;
+          }
+        });
+      });
+      return authors;
+    };
+
+    _this.state = { tabindex: 0, scrollDirection: 'UP', toggleSelectLessonId: 0 };
+    return _this;
+  }
+
+  _createClass(Course, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.scrollY !== this.props.scrollY) {
+        if (nextProps.scrollY > this.props.scrollY) this.setState({ scrollDirection: 'UP' });else this.setState({ scrollDirection: 'DOWN' });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _fixed = false;
+      if (this.tabs && this.props.scrollY > this.tabs.offsetTop - 84 - (this.state.scrollDirection === 'UP' ? 72 : 20)) _fixed = true;
+      var tabControlsStyle = (0, _classnames2.default)({
+        'tab-controls-wrap': true,
+        'js-tab-controls-wrap': true,
+        '_fixed': _fixed
+      });
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'main' },
+        _react2.default.createElement(
+          'div',
+          { className: 'intro' },
+          _react2.default.createElement(
+            'div',
+            { className: 'layout-positioner clearfix' },
+            _react2.default.createElement(
+              'div',
+              { className: 'intro__col' },
+              _react2.default.createElement(
+                'h1',
+                { className: 'intro__title' },
+                _react2.default.createElement(
+                  'span',
+                  null,
+                  this.props.course.name
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'intro__col _right' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro__authors' },
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.properties.courseAuthorsLabel', defaultMessage: 'Author', values: { authorCount: this.props.course.authors.length } })
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  _react2.default.createElement(
+                    'span',
+                    null,
+                    this._getHeadCourseAuthors(this.props.course)
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                { className: 'intro__text' },
+                _react2.default.createElement(
+                  'span',
+                  null,
+                  this.props.course.description
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: tabControlsStyle, ref: function ref(tabControls) {
+              return _this2.tabControls = tabControls;
+            } },
+          _react2.default.createElement(
+            'div',
+            { className: 'layout-positioner clearfix' },
+            _react2.default.createElement(
+              'div',
+              { className: 'plus-btn show', tabIndex: '0', onClick: function onClick() {
+                  console.log(_this2.tabControls.getBoundingClientRect());
+                } },
+              _react2.default.createElement(
+                'span',
+                null,
+                '+'
+              )
+            ),
+            _react2.default.createElement(
+              'ul',
+              { className: 'tab-controls js-tab-controls' },
+              _react2.default.createElement(
+                'li',
+                { onClick: function onClick() {
+                    return _this2.setState({ tabindex: 0 });
+                  }, className: this.state.tabindex === 0 ? 'current' : '' },
+                _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tabs.lessons', defaultMessage: 'Lessons' })
+              ),
+              _react2.default.createElement(
+                'li',
+                { onClick: function onClick() {
+                    return _this2.setState({ tabindex: 1 });
+                  }, className: this.state.tabindex === 1 ? 'current' : '' },
+                _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tabs.materials', defaultMessage: 'Additional materials' })
+              ),
+              _react2.default.createElement(
+                'li',
+                { onClick: function onClick() {
+                    return _this2.setState({ tabindex: 2 });
+                  }, className: this.state.tabindex === 2 ? 'current' : '' },
+                _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tabs.properties', defaultMessage: 'Properties' })
+              ),
+              _react2.default.createElement(
+                'li',
+                { onClick: function onClick() {
+                    return _this2.setState({ tabindex: 3 });
+                  }, className: 'archive' },
+                _react2.default.createElement(
+                  'svg',
+                  { width: '20', height: '20', viewBox: '0 0 20 20', version: '1.1', xmlns: 'http://www.w3.org/2000/svg', xmlnsXlink: 'http://www.w3.org/1999/xlink' },
+                  _react2.default.createElement(
+                    'title',
+                    null,
+                    'Trash 2'
+                  ),
+                  _react2.default.createElement(
+                    'desc',
+                    null,
+                    'Created using Figma'
+                  ),
+                  _react2.default.createElement(
+                    'g',
+                    { id: 'Canvas', transform: 'translate(6863 3226)' },
+                    _react2.default.createElement(
+                      'g',
+                      { id: 'Trash 2' },
+                      _react2.default.createElement(
+                        'g',
+                        { id: 'Archive' },
+                        _react2.default.createElement(
+                          'g',
+                          { id: 'Vector' },
+                          _react2.default.createElement('use', { xlinkHref: '#path0_fill', transform: 'translate(-6862 -3225)' })
+                        ),
+                        _react2.default.createElement(
+                          'g',
+                          { id: 'Vector' },
+                          _react2.default.createElement('use', { xlinkHref: '#path1_fill', transform: 'translate(-6861 -3221)' })
+                        )
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'defs',
+                    null,
+                    _react2.default.createElement('path', { id: 'path0_fill', d: 'M 18 3L 0 3L 0 2C 0 0.9 0.9 0 2 0L 16 0C 17.1 0 18 0.9 18 2L 18 3Z' }),
+                    _react2.default.createElement('path', { id: 'path1_fill', d: 'M 0 0L 0 12C 0 13.1 0.9 14 2 14L 14 14C 15.1 14 16 13.1 16 12L 16 0L 0 0ZM 10 6L 6 6C 4.9 6 4 5.325 4 4.5C 4 3.675 4.9 3 6 3L 10 3C 11.1 3 12 3.675 12 4.5C 12 5.325 11.1 6 10 6Z' })
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'tabs-wrap', ref: function ref(tabs) {
+              return _this2.tabs = tabs;
+            } },
+          _react2.default.createElement(
+            'ul',
+            { className: 'tabs js-tabs' },
+            _react2.default.createElement(
+              'li',
+              { className: this.state.tabindex === 0 ? 'current' : '' },
+              _react2.default.createElement(
+                'div',
+                { className: 'lessons' },
+                this.props.course.lessons.map(function (lesson, idx) {
+                  return _react2.default.createElement(
+                    'div',
+                    { key: idx, className: 'lesson' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'layout-positioner' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'lesson__drag' },
+                        'Drag'
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'lesson__number' },
+                        lesson.lessonToCourse.orderNum
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'lesson__play-block' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'lesson__play', tabIndex: '0' },
+                          'Play'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'lesson__duration' },
+                          _react2.default.createElement(
+                            'span',
+                            null,
+                            '43:07'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'lesson__title' },
+                        _react2.default.createElement(
+                          'h3',
+                          null,
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'lesson__type' },
+                            _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.lessons.label.lection', defaultMessage: 'Lection' }),
+                            '. '
+                          ),
+                          _react2.default.createElement(
+                            'a',
+                            null,
+                            lesson.name
+                          )
+                        )
+                      ),
+                      _this2._getLessonStatus(lesson)
+                    )
+                  );
+                })
+              )
+            ),
+            _react2.default.createElement('li', { className: this.state.tabindex === 1 ? 'current' : '' }),
+            _react2.default.createElement(
+              'li',
+              { className: this.state.tabindex === 2 ? 'current' : '' },
+              _react2.default.createElement(
+                'form',
+                { action: '#', className: 'settings-form' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'settings' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'layout-positioner' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'settings-form__wrapper' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'settings__col _left' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'settings__col-row' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'settings__image' },
+                            _react2.default.createElement('input', { type: 'file', className: 'settings-form__upload' }),
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'settings__image-wrapper' },
+                              _react2.default.createElement('img', { src: '/assets/images/bg-pre.png', alt: '' })
+                            ),
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'settings__image-btn' },
+                              '...'
+                            )
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'settings__image-name settings-form__field-wrapper' },
+                            _react2.default.createElement(
+                              'label',
+                              { htmlFor: 'image', className: 'settings-form__label' },
+                              _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.properties.courseCover', defaultMessage: 'Cover' })
+                            ),
+                            _react2.default.createElement('input', { type: 'text', id: 'image', className: 'settings-form__field', value: 'background.jpg' }),
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'settings-form__delete' },
+                              'x'
+                            )
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'settings__authors' },
+                          _react2.default.createElement(
+                            'p',
+                            { className: 'settings__authors-title' },
+                            _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.properties.courseAuthors', defaultMessage: 'Course author', values: { authorCount: this.props.course.authors.length } })
+                          ),
+                          _react2.default.createElement(
+                            'ul',
+                            null,
+                            this._getCourseAuthors(this.props.course)
+                          ),
+                          _react2.default.createElement(
+                            'p',
+                            { className: 'settings__add-author' },
+                            '+ ',
+                            _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.properties.button.addAuthor', defaultMessage: 'Add author' })
+                          )
+                        ),
+                        _react2.default.createElement(_Dropdown_1_Course2.default, { dropdownOptions: {
+                            'A': 'course.tab.properties.dropdown.visible.a',
+                            'U': 'course.tab.properties.dropdown.visible.u',
+                            'R': 'course.tab.properties.dropdown.visible.r'
+                          },
+                          currentDropdownOption: 'A',
+                          callback: null,
+                          labelIntlId: 'course.tab.properties.dropdown.visible.label',
+                          labelIntlDefault: 'Course is visible' }),
+                        _react2.default.createElement(_Dropdown_1_Course2.default, { dropdownOptions: {
+                            'ALL': 'text.language.all',
+                            'RU': 'text.language.ru',
+                            'EN': 'text.language.en',
+                            'FR': 'text.language.fr'
+                          },
+                          currentDropdownOption: 'ALL',
+                          callback: null,
+                          labelIntlId: 'course.tab.properties.dropdown.language.label',
+                          labelIntlDefault: 'Course Language' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'settings__col' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'settings-form__field-wrapper empty' },
+                          _react2.default.createElement(
+                            'label',
+                            { htmlFor: 'title', className: 'settings-form__label' },
+                            '\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043A\u0443\u0440\u0441\u0430'
+                          ),
+                          _react2.default.createElement('input', { type: 'text', id: 'title', className: 'settings-form__field', placeholder: '\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043A\u0443\u0440\u0441\u0430', value: this.props.course.name }),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'settings-form__delete' },
+                            'x'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'settings-form__field-wrapper' },
+                          _react2.default.createElement(
+                            'label',
+                            { htmlFor: 'description', className: 'settings-form__label' },
+                            _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.properties.courseDescription', defaultMessage: 'Description' })
+                          ),
+                          _react2.default.createElement('textarea', { id: 'description', className: 'settings-form__textarea', defaultValue: this.props.course.description })
+                        ),
+                        _react2.default.createElement(_Dropdown_1_Course2.default, { dropdownOptions: {
+                            'A': 'course.tab.properties.dropdown.status.a',
+                            'D': 'course.tab.properties.dropdown.status.d',
+                            'P': 'course.tab.properties.dropdown.status.p'
+                          },
+                          currentDropdownOption: 'A',
+                          callback: null,
+                          labelIntlId: 'course.tab.properties.dropdown.status.label',
+                          labelIntlDefault: 'Status' })
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'settings-form__btns' },
+                      _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn--red btn-save' },
+                        _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.properties.button.save', defaultMessage: 'Save' })
+                      ),
+                      _react2.default.createElement('input', { type: 'reset', className: 'btn btn-reset', value: '\u041E\u0442\u043C\u0435\u043D\u0430' })
+                    )
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              { className: this.state.tabindex === 3 ? 'current' : '' },
+              _react2.default.createElement(
+                'div',
+                { className: 'lessons archive' },
+                this.props.course.lessons.map(function (lesson, idx) {
+
+                  if (lesson.state === 'A') {
+                    return _react2.default.createElement(
+                      'div',
+                      { key: idx, className: 'lesson' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'layout-positioner' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'lesson__play-block' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'lesson__play', tabIndex: '0' },
+                            'Play'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'lesson__duration' },
+                            '43:07'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'lesson__title' },
+                          _react2.default.createElement(
+                            'h3',
+                            null,
+                            _react2.default.createElement(
+                              'span',
+                              { className: 'lesson__type' },
+                              _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.lessons.label.lection', defaultMessage: 'Lection' }),
+                              '.'
+                            ),
+                            _react2.default.createElement(
+                              'a',
+                              null,
+                              lesson.name
+                            )
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'lesson__status' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'lesson__info' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'lesson__reset' },
+                              _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.lessons.label.restore', defaultMessage: 'Restore' })
+                            ),
+                            _react2.default.createElement(
+                              'p',
+                              { className: '_status' },
+                              _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.lessons.label.archived', defaultMessage: 'Archived' })
+                            ),
+                            _react2.default.createElement(
+                              'p',
+                              { className: 'date' },
+                              _react2.default.createElement(
+                                'span',
+                                null,
+                                '28 \u0438\u044E\u043B\u044F'
+                              )
+                            ),
+                            _react2.default.createElement(
+                              'p',
+                              null,
+                              _react2.default.createElement(
+                                'span',
+                                null,
+                                '2017'
+                              )
+                            )
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'lesson__del', tabIndex: '0' },
+                            _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'course.tab.lessons.label.remove', defaultMessage: 'Remove' })
+                          )
+                        )
+                      )
+                    );
+                  }
+                })
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Course;
+}(_react2.default.Component);
+
+// CoursesWrapper.propTypes = {
+//   courses: PropTypes.objectOf(
+//     PropTypes.arrayOf(
+//       PropTypes.shape({
+//         id: PropTypes.number,
+//         name: PropTypes.string,
+//         author: PropTypes.string,
+//         price: PropTypes.string,
+//         image: PropTypes.image
+//       })
+//     )
+//   )
+// }
+
+exports.default = Course;
+
+/***/ }),
+/* 352 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(5);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactIntl = __webpack_require__(20);
+
+var _classnames = __webpack_require__(46);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Dropdown_1_Course = function (_React$PureComponent) {
+  _inherits(Dropdown_1_Course, _React$PureComponent);
+
+  function Dropdown_1_Course(props) {
+    _classCallCheck(this, Dropdown_1_Course);
+
+    var _this = _possibleConstructorReturn(this, (Dropdown_1_Course.__proto__ || Object.getPrototypeOf(Dropdown_1_Course)).call(this, props));
+
+    _this._handleClick = function (option) {
+      _this.setState({ currentOption: option, open: false });
+    };
+
+    _this.state = {
+      open: false,
+      currentOption: _this.props.currentDropdownOption
+    };
+    return _this;
+  }
+
+  _createClass(Dropdown_1_Course, [{
+    key: 'render',
+
+
+    //       <FormattedMessage id="app.greeting" defaultMessage="Hi there?" />
+
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          dropdownOptions = _props.dropdownOptions,
+          callback = _props.callback,
+          labelIntlId = _props.labelIntlId,
+          labelIntlDefaul = _props.labelIntlDefaul;
+
+      var selectStyle = (0, _classnames2.default)({
+        'select-styled': true,
+        'active': this.state.open
+      });
+
+      var currentOptionText = _react2.default.createElement(_reactIntl.FormattedMessage, { id: dropdownOptions[this.state.currentOption], defaultMessage: '' });
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'settings-form__field-wrapper' },
+        _react2.default.createElement(
+          'label',
+          { htmlFor: 'visibility', className: 'settings-form__label' },
+          _react2.default.createElement(_reactIntl.FormattedMessage, { id: labelIntlId, defaultMessage: labelIntlDefaul })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'select', onClick: function onClick() {
+              return _this2.setState({ open: !_this2.state.open });
+            } },
+          _react2.default.createElement(
+            'div',
+            { className: selectStyle },
+            currentOptionText
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'select-options', style: { 'display': this.state.open ? 'block' : 'none' } },
+            Object.keys(dropdownOptions).map(function (option, idx) {
+              return _react2.default.createElement(
+                'li',
+                { key: idx, onClick: function onClick() {
+                    return _this2._handleClick(option);
+                  }, className: '' },
+                _react2.default.createElement(_reactIntl.FormattedMessage, { id: dropdownOptions[option], defaultMessage: dropdownOptions[option] })
+              );
+            })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Dropdown_1_Course;
+}(_react2.default.PureComponent);
+
+exports.default = Dropdown_1_Course;
 
 /***/ })
 /******/ ]);

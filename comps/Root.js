@@ -23,7 +23,7 @@ class Root extends React.Component {
       scrlY = window.scrollY;
     }
 
-    this.mRoutes = matchRoutes(this.props.route.routes, this.props.location.pathname);
+    // this.mRoutes = matchRoutes(this.props.route.routes, this.props.location.pathname);
     this.routeObject = {};
 
     this.state = {
@@ -66,7 +66,7 @@ class Root extends React.Component {
     })
     // console.log('ROOT::::::')
     // console.log(this.props)
-
+    const mRoutes = matchRoutes(this.props.route.routes, this.props.location.pathname);
 
     return (
       <div className="global-wrapper">
@@ -105,7 +105,7 @@ class Root extends React.Component {
         {renderRoutes(this.props.route.routes, {
           ...this.props,
           scrollY: this.state.scrollY,
-          mRoute: this.mRoutes[this.mRoutes.length - 1],
+          mRoute: mRoutes[mRoutes.length - 1],
           routeObject: this.routeObject,
           languages: this.props.languages
         })}

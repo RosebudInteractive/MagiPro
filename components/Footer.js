@@ -15,7 +15,9 @@ class Footer extends React.PureComponent {
       <div className="footer">
         <div className="layout-positioner clearfix">
           <div className="footer__language-picker">
-            <span className="footer__language-picker-title"><span>Язык:</span></span>
+            <span className="footer__language-picker-title">
+            <FormattedMessage id='text.language' defaultMessage="Language" />
+            </span>
             <ul>
               <li className={currentLocale === 'ru' ? "picked" : ''}>
                 <a href="#" onClick={() => setInterfaceLang('ru')}><span>Русский</span></a>

@@ -53,7 +53,7 @@ module.exports = function (sequelize, DataTypes) {
 
   Lesson.associate = (models) => {
     Lesson.belongsToMany(models.Course, { through: { model: models.LessonToCourse, unique: false }, foreignKey: 'lesson_id', sourceKey: 'course_id' })
-    Lesson.belongsTo(models.Author, { foreignKey: 'id', sourceKey: 'author_id'})
+    // Lesson.belongsTo(models.Author, { foreignKey: 'id', sourceKey: 'author_id'})
   }
 
   return Lesson;
